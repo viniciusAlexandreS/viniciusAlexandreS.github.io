@@ -1,0 +1,81 @@
+    <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Inscrição</title>
+</head>
+<body>
+     
+    <h1>Inscrição - Semana de Tecnologia</h1>
+
+    <form action="https://httpbin.org/post" method="post" enctype="multipart/form-data">
+
+        <input type="hidden" name="edicao" value="2026">
+
+        <h3>Identificação</h3>
+        
+        <p>
+            <label for="nome">Nome do estudande:</label>
+            <input type="text" id="nome" name="nome" required>
+        </p>
+
+        <p>
+            <label for="email">E-mail institucional:</label>
+            <input type="email" id="email" name="email" required>
+        </p>
+
+        <p>
+            <label for="cidade">Cidade de nascimento:</label>
+            <input type="text" id="cidade" name="cidade" list="cidades">
+            <datalist id="cidades">
+                <option value="Maceió">
+                <option value="Arapiraca">
+                <option value="Penedo">
+            </datalist>
+        </p>
+
+        <p>
+            <label for="foto">Foto para crachá:</label>
+            <input type="file" id="foto" name="foto" accept="image/jpeg,image/png">
+        </p>
+
+        <h3>Preferências</h3>
+
+        <p>
+            <label for="chegada">Data e hora de chegada:</label>
+            <input type="datetime-local" id="chegada" name="chegada">
+        </p>
+
+        <p>
+            <label for="experiencia">Nível de experiência: <span id="valor-experiencia">5</span>/10</label>
+            <br>
+            <input type="range" id="experiencia" name="experiencia" min="0" max="10" step="1" value="5" oninput="document.getElementById('valor-experiencia').textContent = this.value">
+        </p>
+
+        <p>
+            <label for="cor">Cor da camiseta:</label>
+            <input type="color" id="cor" name="cor_camiseta" value="#1a73e8">
+        </p>
+
+        <p>
+            <label for="oficinas">Oficinas (Segure Ctrl para escolher mais de uma):</label>
+            <br>
+            <select id="oficinas" name="oficinas[]" multiple size="4">
+                <option value="html">HTML e CSS</option>
+                <option value="python">Python</option>
+                <option value="sql">Banco de Dados</option>
+                <option value="git">Git e GitHub</option>
+            </select>
+        </p>
+
+        <p>
+            <button type="submit">Confirmar</button>
+        </p>
+
+    </form>
+<header>
+            <h1>Inscrição</h1>
+            <p><a href="../index.html">← Voltar para a página principal</a></p>
+        </header>
+</body>
+</html>

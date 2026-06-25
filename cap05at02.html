@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Usuário</title>
+</head>
+<body>
+
+    <h1>cadastre-se</h1>
+
+    <form action="https://httpbin.org/post" method="post">
+        
+        <p>
+            <label for="txt-nome">Nome completo:</label>
+            <input type="text" id="txt-nome" name="nome" required minlength="3">
+        </p>
+
+        <p>
+            <label for="txt-email">E-mail:</label>
+            <input type="email" id="txt-email" name="email" required>
+        </p>
+
+        <p>
+            <label for="txt-senha">Senha:</label>
+            <input type="password" id="txt-senha" name="senha" required minlength="8">
+        </p>
+
+        <p>
+            <label for="txt-nascimento">Data de nascimento:</label>
+            <input type="date" id="txt-nascimento" name="nascimento" required>
+        </p>
+
+        <fieldset>
+            <legend>Gênero</legend>
+            
+            <p>
+                <input type="radio" id="rad-masc" name="genero" value="masculino">
+                <label for="rad-masc">Masculino</label>
+            </p>
+            <p>
+                <input type="radio" id="rad-fem" name="genero" value="feminino">
+                <label for="rad-fem">Feminino</label>
+            </p>
+            <p>
+                <input type="radio" id="rad-outro" name="genero" value="outro">
+                <label for="rad-outro">Outro</label>
+            </p>
+            <p>
+                <input type="radio" id="rad-ni" name="genero" value="prefiro_nao_informar">
+                <label for="rad-ni">Prefiro não informar</label>
+            </p>
+        </fieldset>
+
+        <p>
+            <input type="checkbox" id="chk-aceite" name="aceite" value="sim" required>
+            <label for="chk-aceite">Li e aceito os termos de uso e condições</label>
+        </p>
+
+        <p>
+            <button type="submit">Criar conta</button>
+            <button type="reset">Limpar campos</button>
+        </p>
+
+    </form>
+<header>
+            <h1>cadastro de usuario</h1>
+            <p><a href="../index.html">← Voltar para a página principal</a></p>
+        </header>
+</body>
+</html>
+

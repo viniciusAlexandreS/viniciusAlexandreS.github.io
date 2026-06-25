@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitação de Matrícula Acadêmica</title>
+</head>
+<body>
+
+    <h1>Solicitação de Matrícula</h1>
+    <p><em> Campos obrigatórios*</em></p>
+
+    <form action="https://httpbin.org/post" method="post">
+
+        <fieldset>
+            <legend>Dados Pessoais</legend>
+            
+            <p>
+                <label for="txt-nome">Nome completo *:</label>
+                <input type="text" id="txt-nome" name="nome" required minlength="5" maxlength="100">
+            </p>
+
+            <p>
+                <label for="txt-cpf">CPF *:</label>
+                <input type="text" id="txt-cpf" name="cpf" required pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" placeholder="000.000.000-00" title="CPF no formato 000.000.000-00">
+            </p>
+
+            <p>
+                <label for="txt-tel">Telefone:</label>
+                <input type="tel" id="txt-tel" name="telefone" pattern="\(\d{2}\)\s\d{4,5}-\d{4}" placeholder="(82) 99999-9999">
+            </p>
+
+            <p>
+                <label for="txt-email">E-mail *:</label>
+                <input type="email" id="txt-email" name="email" required>
+            </p>
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+            <legend>Dados Acadêmicos</legend>
+
+            <p>
+                <label for="sel-curso">Curso *:</label>
+                <select id="sel-curso" name="curso" required>
+                    <option value="">-- Selecione um curso --</option>
+                    <optgroup label="Computação">
+                        <option value="sistemas_informacao">Sistemas de Informação</option>
+                        <option value="ciencia_computacao">Ciência da Computação</option>
+                        <option value="engenharia_computacao">Engenharia da Computação</option>
+                    </optgroup>
+                    <optgroup label="Gestão">
+                        <option value="administracao">Administração</option>
+                        <option value="ciencias_contabeis">Ciências Contábeis</option>
+                    </optgroup>
+                </select>
+            </p>
+
+            <fieldset>
+                <legend>Período</legend>
+                <p>
+                    <input type="radio" id="rad-manha" name="periodo" value="manha">
+                    <label for="rad-manha">Manhã</label>
+                </p>
+                <p>
+                    <input type="radio" id="rad-tarde" name="periodo" value="tarde">
+                    <label for="rad-tarde">Tarde</label>
+                </p>
+                <p>
+                    <input type="radio" id="rad-noite" name="periodo" value="noite">
+                    <label for="rad-noite">Noite</label>
+                </p>
+            </fieldset>
+
+            <p>
+                <label for="num-ano">Ano de ingresso pretendido *:</label>
+                <input type="number" id="num-ano" name="ano_ingresso" min="2025" max="2030" required>
+            </p>
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+            <legend>Áreas de Interesse</legend>
+            <p>Selecione suas áreas de interesse (opcional):</p>
+            
+            <p>
+                <input type="checkbox" id="chk-devweb" name="interesses[]" value="desenvolvimento_web">
+                <label for="chk-devweb">Desenvolvimento Web</label>
+            </p>
+            <p>
+                <input type="checkbox" id="chk-bd" name="interesses[]" value="banco_dados">
+                <label for="chk-bd">Banco de Dados</label>
+            </p>
+            <p>
+                <input type="checkbox" id="chk-ia" name="interesses[]" value="inteligencia_artificial">
+                <label for="chk-ia">logica da programação</label>
+            </p>
+            <p>
+                <input type="checkbox" id="chk-seg" name="interesses[]" value="seguranca_informacao">
+                <label for="chk-seg">Segurança da Informação</label>
+            </p>
+            <p>
+                <input type="checkbox" id="chk-infra" name="interesses[]" value="infraestrutura">
+                <label for="chk-infra">Infraestrutura</label>
+            </p>
+        </fieldset>
+
+        <br>
+
+        <p>
+            <button type="submit">Solicitar matrícula</button>
+            <button type="reset">Limpar formulário</button>
+        </p>
+
+    </form>
+<header>
+            <h1>solicitação da matricula</h1>
+            <p><a href="../index.html">← Voltar para a página principal</a></p>
+        </header>
+</body>
+</html>
